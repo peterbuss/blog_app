@@ -6,7 +6,7 @@ gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
 gem 'bootstrap-sass', '~>3.3.4.1'
 gem 'autoprefixer-rails', '~>5.2.0'
-gem 'sqlite3'
+
 gem 'devise', '~>3.5.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -49,10 +49,15 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pg'
 end
 
 group :test do
   gem 'capybara', '2.4.4'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
