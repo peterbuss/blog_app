@@ -6,7 +6,7 @@ RSpec.feature "Adding Reviews to Articles" do
     @fred = User.create(email: "fred@example.com", password: "password")
     
     @article = Article.create(title: "The first article", body: "body of first article", user: @john)
-  end   
+  end     
   
   scenario "permits a signed in user to write a review" do
     login_as(@fred)
